@@ -57,7 +57,7 @@ HashTableLinear.prototype.get = function(key) {
   const hashedIdx = this.hash(key)
 
   while (this.keys[hashedIdx] !== key) {
-    hashedIdx++
+    hashedIdx += Math.pow(squareIdx, 2)
     hashedIdx = hashedIdx % this.size
   }
 
