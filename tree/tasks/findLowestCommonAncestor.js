@@ -10,7 +10,7 @@ function findLowestCommonAncestor(root, value1, value2) { //Time Complexity: O(l
     }
     return findLowestCommonAncestorHelper(root, value1, value2);
 }
-var node1 = {
+const node1 = {
     value: 1,
     left: {
         value: 0
@@ -20,7 +20,7 @@ var node1 = {
     }
 }
 
-var node2 = {
+const node2 = {
     value: 1,
     left: {
         value: 0,
