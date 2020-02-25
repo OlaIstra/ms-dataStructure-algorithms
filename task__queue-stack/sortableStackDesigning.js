@@ -20,6 +20,8 @@ sortStack.prototype.sortDescending = function() {
   }
 }
 
+//Time Complexity: O(n^2)
+
 const stackToBeSorted = new sortStack(10)
 console.log(stackToBeSorted)
 stackToBeSorted.sortDescending()
