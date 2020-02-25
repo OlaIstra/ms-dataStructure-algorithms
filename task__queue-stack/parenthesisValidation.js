@@ -10,5 +10,7 @@ function isParenthesisValid(string) {
   return stack.isEmpty()
 }
 
+// Time Complexity: O(n)
+
 console.log(isParenthesisValid("((()"))
 console.log(isParenthesisValid("()()"))
