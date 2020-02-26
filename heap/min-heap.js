@@ -59,3 +59,24 @@ MinHeap.prototype.bubbleDown = function() {
         index = smallerIndex;
     }
 }
+
+MinHeap.prototype.bubbleUp = function() {
+    var index = this.items.length - 1;
+    while (this.parent(index) && this.parent(index) > this.items[index]) {
+        this.swap(this.parentIndex(index), index);
+        index = this.parentIndex(index);
+    }
+}
+
+var mh1 = new MinHeap();
+mh1.add(1);
+mh1.add(10);
+mh1.add(5);
+mh1.add(100);
+mh1.add(8);
+
+console.log(mh1.poll()); // 1
+console.log(mh1.poll()); // 5
+console.log(mh1.poll()); // 8
+console.log(mh1.poll()); // 10
+console.log(mh1.poll()); // 100
