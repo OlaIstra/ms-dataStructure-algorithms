@@ -52,3 +52,20 @@ function partition(array, left, right) {
 quickSort([6,1,23,4,2,3]); // [1, 2, 3, 4, 6, 23]
 //Time Complexity: O(nlog2(n)) on average, O(n2) for worst case
 //Space Complexity: O(log2(n))
+
+const quickSort2 = function(arr) {
+    if (arr.length <= 1) return arr
+
+    const pivot = arr[arr.length - 1 ]
+    const left = []
+    const right = []
+    
+    arr.forEach(el => {
+        (el < pivot) ? left.push(el) : right.push(el)
+    })
+
+    
+
+    return [...quickSort(left), pivot, ...quickSort(right)]
+
+};
