@@ -54,18 +54,22 @@ quickSort([6,1,23,4,2,3]); // [1, 2, 3, 4, 6, 23]
 //Space Complexity: O(log2(n))
 
 const quickSort2 = function(arr) {
-    if (arr.length <= 1) return arr
+  if(array.length < 2) {
+    return array;
+  }
 
-    const pivot = arr[arr.length - 1 ]
-    const left = []
-    const right = []
-    
-    arr.forEach(el => {
-        (el < pivot) ? left.push(el) : right.push(el)
-    })
+  var pivot = array[0];
+  var left = [];
+  var right = [];
 
-    
+  for (var i = 1; i < array.length; i++) {
+    if ( array[i] > pivot ) {
+      right.push(array[i]);
+    } else {
+      left.push(array[i]);
+    }
+  }
 
-    return [...quickSort(left), pivot, ...quickSort(right)]
+  return [...quickSortBasic(left), pivot, ...quickSortBasic(right)]
 
 };
